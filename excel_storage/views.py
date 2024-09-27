@@ -19,3 +19,8 @@ def add_excel_file(request):
         hashed_file = fs2.save(hash(file.name), file)
         return JsonResponse({'clear_file_address': request.build_absolute_uri(fs.url(file_name)),
                              'hashed_address': request.build_absolute_uri(fs2.url(hashed_file))})
+
+
+@csrf_exempt
+def hi(request):
+    return JsonResponse({'clear_file_address': "+"})

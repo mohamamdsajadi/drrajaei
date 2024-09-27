@@ -24,6 +24,7 @@ from excel_storage import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('add_excel/', views.add_excel_file, name='add_execl_file'),
+    path('hi/', views.hi, name='add_execl_file'),
 ]
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
